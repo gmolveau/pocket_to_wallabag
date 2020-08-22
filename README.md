@@ -1,0 +1,31 @@
+# Pocket to wallabag exporter
+
+Use this script to export your [pocket](https://getpocket.com) items to [wallabag](https://www.wallabag.it).
+
+## Getting started
+
+### API Keys
+
+You first need to create an application on pocket : [https://getpocket.com/developer/apps/](https://getpocket.com/developer/apps/).
+
+Pocket will give you a `Consumer Key`.
+
+Next in wallabag, `create a new client` in `API clients management`. This will give you a `Client ID` and a `Client secret`.
+
+Edit all those informations in `env.py`.
+
+### Requirements
+
+The only dependency is `requests` so you can either install it globally with `pip3 install --user requests` or use a `virtualenv`.
+
+Or to create a virtualenv : `python3 -m venv venv`.
+
+Activate it : `source venv/bin/activate`
+
+And install the necessary libraries : `pip3 install -r requirements.txt`
+
+### Execution
+
+Then, execute the script : `python3 pocket_to_wallabag.py`
+
+Done :)
