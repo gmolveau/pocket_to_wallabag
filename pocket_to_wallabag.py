@@ -87,15 +87,14 @@ headers = {
 }
 # TODO make it faster (concurrency, threads, asyncio, futures, gevent ...)
 for index, url in enumerate(urls):
-    print(f"[wallabag] importing {index}/{len(urls)} : {url} ...")
-
     payload = {
         "url": url,
     }
     r = requests.post(f"{WALLABAG_URL}/api/entries.json", data=payload, headers=headers)
 
-    err_on_status_code(r, "[wallabag] error while importing", exit=False)
+    if request.status_code != 200:
+        print(f"[wallabag] error while importing {index}/{len(urls)} {url} : {r.status_code} - {r.text}")
 
-    print(f"[wallabag] success : {r.status_code}")
+    print(f"[wallabag] success importing {index}/{len(urls)} : {url}")
 
 print("done :) gg! your pocket items were successfully migrated to wallabag")

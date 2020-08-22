@@ -29,3 +29,7 @@ And install the necessary libraries : `pip3 install -r requirements.txt`
 Then, execute the script : `python3 pocket_to_wallabag.py`
 
 Done :)
+
+---
+
+PS: to import 382 items here's the time result : `5.97s user 0.26s system 1% cpu 10:20.49 total` so 10 minutes.
