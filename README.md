@@ -33,3 +33,5 @@ Done :)
 ---
 
 PS: to import 382 items here's the time result : `5.97s user 0.26s system 1% cpu 10:20.49 total` so 10 minutes.
+
+PSS : you can change the line `"state": "unread",` to `"state": "all",` in `pocket_to_wallabag.py` if you want to export ALL your pocket items (archived ones included).
