@@ -94,7 +94,7 @@ for index, url in enumerate(urls):
 
     if request.status_code != 200:
         print(f"[wallabag] error while importing {index}/{len(urls)} {url} : {r.status_code} - {r.text}")
-
-    print(f"[wallabag] success importing {index}/{len(urls)} : {url}")
+    else :
+        print(f"[wallabag] success importing {index}/{len(urls)} : {url}")
 
 print("done :) gg! your pocket items were successfully migrated to wallabag")

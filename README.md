@@ -18,7 +18,7 @@ Edit all those informations in `env.py`.
 
 The only dependency is `requests` so you can either install it globally with `pip3 install --user requests` or use a `virtualenv`.
 
-Or to create a virtualenv : `python3 -m venv venv`.
+To create the virtualenv : `python3 -m venv venv`.
 
 Activate it : `source venv/bin/activate`
 
