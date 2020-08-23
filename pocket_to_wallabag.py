@@ -88,12 +88,13 @@ headers = {
 for index, url in enumerate(urls):
     payload = {
         "url": url,
+        "tags": "pocket",
     }
     r = requests.post(f"{WALLABAG_URL}/api/entries.json", data=payload, headers=headers)
 
-    if request.status_code != 200:
-        print(f"[wallabag] error while importing {index}/{len(urls)} {url} : {r.status_code} - {r.text}")
+    if r.status_code != 200:
+        print(f"[wallabag] error while importing {index+1}/{len(urls)} {url} : {r.status_code} - {r.text}")
     else :
-        print(f"[wallabag] success importing {index}/{len(urls)} : {url}")
+        print(f"[wallabag] success importing {index+1}/{len(urls)} : {url}")
 
 print("done :) gg! your pocket items were successfully migrated to wallabag")
