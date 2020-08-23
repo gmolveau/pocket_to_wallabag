@@ -7,11 +7,10 @@ import sys
 
 from env import *
 
-def err_on_status_code(request, text, exit=True):
+def err_on_status_code(request, msg):
     if request.status_code != 200:
-        print(f"{text} : {r.status_code} - {r.text}")
-        if exit:
-            sys.exit(1)
+        print(f"{msg} : {r.status_code} - {r.text}")
+        sys.exit(1)
 
 # REQUESTS CONFIG
 headers = {'X-Accept': 'application/json'}
